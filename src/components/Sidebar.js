@@ -14,8 +14,24 @@ import AddIcon from '@material-ui/icons/Add';
 
 import './Sidebar.css';
 import SidebarOption from './SidebarOption';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import db from '../firebase';
 
 function Sidebar() {
+  const [channels, setChannels] = useState([]);
+
+  useEffect(() => {
+    db.collection('room').onSnapshot((snapshot) => {
+      setChannels(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          name: doc.data().name,
+        }))
+      );
+    });
+  }, []);
+
   return (
     <div className="Sidebar">
       <div className="Sidebar-header">
@@ -43,6 +59,11 @@ function Sidebar() {
       <SidebarOption Icon={AddIcon} title="Add Channel" />
 
       {/* Connect to the database and list all the database */}
+      {/* <SidebarOption/> */}
+
+      {channels.map((channel) => (
+        <SidebarOption title={channel.name} key={channel.id} />
+      ))}
     </div>
   );
 }
