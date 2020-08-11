@@ -1,0 +1,21 @@
+.Message {
+  display: flex;
+  align-items: center;
+}
+
+.Message > img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 100%;
+}
+
+.Message-info {
+  padding-left: 10px;
+}
+
+.Message-timestamp {
+  color: gray;
+  font-weight: 300;
+  font-size: 13px;
+}

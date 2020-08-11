@@ -1,0 +1,35 @@
+.Chat {
+  flex: 0.7;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-bottom: 150px;
+}
+
+.Chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.Chat-channelName {
+  display: flex;
+  text-transform: lowercase;
+}
+
+.Chat-channelName > .MuiSvgIcon-root {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.Chat-headerRight > p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.Chat-headerRight > p > .MuiSvgIcon-root {
+  margin-right: 5px;
+  font-size: 16px;
+}
