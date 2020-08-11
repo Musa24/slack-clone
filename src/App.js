@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Login from './components/Login';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Chat from './components/Chat';
+import { UserContext } from './contexts/UserContext';
 
 function App() {
-  const [user, setUser] = useState(null);
-
+  const { user } = useContext(UserContext);
   return (
     <div className="App">
       <Router>

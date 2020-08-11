@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Login.css';
 import { Button } from '@material-ui/core';
 import { auth, provider } from '../firebase';
+import { UserContext } from '../contexts/UserContext';
 
 function Login() {
+  const { loginUser } = useContext(UserContext);
+
   const signIn = () => {
     auth
       .signInWithPopup(provider)
       .then((res) => {
-        console.log(res);
+        loginUser(res.user);
       })
       .catch((err) => {
         console.log('ERRORS', err);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
 import InsertCommentIcon from '@material-ui/icons/InsertComment';
@@ -17,9 +17,11 @@ import SidebarOption from './SidebarOption';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import db from '../firebase';
+import { UserContext } from '../contexts/UserContext';
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
+  const { user } = useContext(UserContext);
 
   useEffect(() => {
     db.collection('room').onSnapshot((snapshot) => {
@@ -39,7 +41,7 @@ function Sidebar() {
           <h2>Clever Programmer</h2>
           <h3>
             <FiberManualRecordIcon />
-            Musa Salumu
+            {user.displayName}
           </h3>
         </div>
         <CreateIcon />

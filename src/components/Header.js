@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import './Header.css';
+import { UserContext } from '../contexts/UserContext';
 
 function Header() {
+  const { user } = useContext(UserContext);
+
   return (
     <div className="Header">
       <div className="Header-left">
         <Avatar
           className="Header-avatar"
-          alt="Remy Sharp"
-          src="/static/images/avatar/1.jpg"
+          alt={user?.diplayName}
+          src={user?.photoURL}
         />
         <AccessTimeIcon />
       </div>
