@@ -21,7 +21,7 @@ function Header() {
       </div>
       <div className="Header-search">
         <SearchIcon />
-        <input type="text" placeholder="Seach Clever Programmer" />
+        <input type="text" placeholder="Search Slack Communities" />
       </div>
       <div className="Header-right">
         <HelpOutlineIcon />

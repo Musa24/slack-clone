@@ -38,7 +38,7 @@ function Sidebar() {
     <div className="Sidebar">
       <div className="Sidebar-header">
         <div className="Sidebar-info">
-          <h2>Clever Programmer</h2>
+          <h2>Slack Communities</h2>
           <h3>
             <FiberManualRecordIcon />
             {user?.displayName}
