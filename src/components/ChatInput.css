@@ -1,0 +1,14 @@
+.ChatInput > form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ChatInput > form > input {
+  position: fixed;
+  bottom: 20px;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}

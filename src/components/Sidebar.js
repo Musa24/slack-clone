@@ -41,7 +41,7 @@ function Sidebar() {
           <h2>Clever Programmer</h2>
           <h3>
             <FiberManualRecordIcon />
-            {user.displayName}
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
