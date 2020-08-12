@@ -25,3 +25,14 @@
   width: 100vh;
   justify-content: space-between;
 }
+
+.Message-updateMessage {
+  width: 60vw;
+}
+
+.Message-updateMessage > input {
+  padding: 5px 0;
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 100%;
+}
