@@ -19,3 +19,9 @@
   font-weight: 300;
   font-size: 13px;
 }
+
+.Message-messageAndButtons {
+  display: flex;
+  width: 100vh;
+  justify-content: space-between;
+}
