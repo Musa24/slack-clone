@@ -1,3 +1,17 @@
+# Deployed with firebase
+Link:  [https://slack-clone-643f4.web.app](https://slack-clone-643f4.web.app)
+
+Version 1.0.0<br /><br />
+
+
+## Used:
+- React Context API
+- React Hooks -> UseEffect,UseState,UseParams
+- React Router
+- Material UI
+- firebase (Storage and Google Authentication)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
