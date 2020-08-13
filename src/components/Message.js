@@ -74,7 +74,7 @@ function Message({ message, timestamp, user, id, userImage }) {
 
           <p>
             <span>
-              <DeleteIcon onClick={handleDeleteMessage} />
+              {toogleUpdate && <DeleteIcon onClick={handleDeleteMessage} />}
             </span>
             <span>
               <UpdateIcon onClick={handleUpdateMessage} />

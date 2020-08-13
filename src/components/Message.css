@@ -1,6 +1,8 @@
 .Message {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 .Message > img {
@@ -22,12 +24,12 @@
 
 .Message-messageAndButtons {
   display: flex;
-  width: 100vh;
+  width: 140vh;
   justify-content: space-between;
 }
 
 .Message-updateMessage {
-  width: 60vw;
+  width: 50vw;
 }
 
 .Message-updateMessage > input {
